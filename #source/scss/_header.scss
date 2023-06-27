@@ -1,0 +1,227 @@
+header.header {
+    margin-top: 56px;
+    z-index: 22;
+    position: relative;
+
+    .header__content {
+        padding: 24px 32px;
+        border-radius: 16px;
+        background: #FFF;
+    }
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .header__logo {
+        flex: 0 0 auto;
+        width: 102px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .header__nav {
+        flex: 0 0 auto;
+        width: calc(100% - 402px);
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-right: 24px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #222020;
+                    font-size: 16px;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: #f58f29;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__btns {
+        flex: 0 0 auto;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.burgermenu {
+    display: none;
+}
+
+.header__btns.mob {
+    display: none;
+}
+
+@media(max-width:1199.8px) {
+
+    header.header {
+        .header__content {
+            padding: 24px;
+
+            .header__btns {
+                width: 270px;
+            }
+
+            .header__logo {
+                width: 100px;
+            }
+
+            .header__nav {
+                width: calc(100% - 370px);
+            }
+        }
+
+        .bluebtn {
+            width: 160px;
+        }
+    }
+
+
+
+
+
+}
+
+@media(max-width:991.8px) {
+    .burgermenu {
+        display: inline-block;
+    }
+
+    header.header .header__content .header__nav,
+    header.header .header__content .header__btns {
+        display: none;
+    }
+
+    .header__content {
+        position: relative;
+    }
+
+    .burgermenu {
+        border: none;
+        padding: 0;
+        outline: none;
+        background-color: transparent;
+        position: absolute;
+        right: 24px;
+        top: 35px;
+        width: 35px;
+        height: 35px;
+        background: url('../img/burger.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+
+        &.active {
+            background: url('../img/close.svg');
+        }
+    }
+
+    header.header {
+        margin-top: 0;
+        background: #fff;
+    }
+
+    .infobox .imgwrap {
+        margin-bottom: 20px;
+    }
+
+
+
+
+    header.header .header__content .header__nav {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 102px);
+        left: 0;
+        top: 102px;
+        background: #fff;
+        padding: 48px;
+        transition: 0.5s;
+        transform: translateX(100%);
+        overflow: auto;
+
+        &.show {
+            transform: translateX(0);
+        }
+    }
+
+    .header__content .header__nav ul {
+        display: block;
+
+        li {
+            margin: 0 0 48px 0;
+            display: block;
+            text-align: center;
+
+            a {
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+    }
+
+
+    header.header .header__content .header__btns.mob {
+        display: block;
+        max-width: 343px;
+        margin: 76px auto 0;
+
+        a {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bluebtn {
+            height: 48px;
+            margin-bottom: 36px;
+        }
+    }
+
+
+}
+
+
+
+
+@media(max-height: 690px) {
+    .header__content .header__nav ul li {
+        margin-bottom: 35px;
+    }
+    header.header .header__content .header__btns.mob {
+        margin-top: 50px;
+    }
+}
+
+@media(max-height: 600px) {
+    .header__content .header__nav ul li {
+        margin-bottom: 30px;
+    }
+    header.header .header__content .header__btns.mob {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,130 @@
+footer.footer {
+    background: #67ADFF;
+    padding: 48px 0 64px;
+}
+
+.footer__logo {
+    img {
+        width: 102px;
+    }
+}
+
+.footer__nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 14px;
+
+            a {
+                color: #fff;
+                font-size: 16px;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.footer__contacts {
+    text-align: right;
+
+    .email {
+        margin-bottom: 8px;
+
+        a {
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+
+    .adr {
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #fff;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url('../img/flag.svg') no-repeat center / 100%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    }
+
+    .ind {
+        color: #fff;
+        font-size: 14px;
+
+        span {
+            font-size: 10px;
+            display: block;
+        }
+    }
+}
+
+@media(max-width:1199.8px) {
+    .footer__contacts .ind {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width:991.8px) {
+
+    .footer__nav ul li {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media(max-width:767.8px) {
+    footer.footer {
+        text-align: center;
+        padding: 36px 0 70px;
+
+        .footer__logo {
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+    }
+
+    .footer__nav ul li {
+        margin: 0 0 32px 0;
+        display: block;
+    }
+
+    .footer__contacts {
+        text-align: center;
+    }
+
+    .footer__nav ul {
+        margin-bottom: 60px;
+    }
+
+    .footer__contacts .email {
+        margin-bottom: 16px;
+    }
+
+    .footer__contacts .ind span {
+        font-size: 12px;
+    }
+
+    .footer__contacts .adr {
+        margin-bottom: 5px;
+    }
+
+
+
+
+
+}
