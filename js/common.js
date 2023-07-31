@@ -99,12 +99,29 @@ $(document).ready(function () {
 
     // mob menu
 
-    $('.burgermenu').click(function(){
+    $('.burgermenu').click(function () {
         $(this).toggleClass('active');
         $('.header__nav').toggleClass('show');
         $('body').toggleClass('hidden');
         window.scrollTo(0, 0);
     });
+
+    // header
+    const $header = $("header.header")
+    let prevScroll
+    let lastShowPos
+
+    $(window).on("scroll", function () {
+        const scrolled = $(window).scrollTop()
+
+        if (scrolled > 100 && scrolled > prevScroll) {
+            $header.addClass("header-out")
+            lastShowPos = scrolled
+        } else if (scrolled <= Math.max(lastShowPos - 250, 0)) {
+            $header.removeClass("header-out")
+        }
+        prevScroll = scrolled
+    })
 
 
 
